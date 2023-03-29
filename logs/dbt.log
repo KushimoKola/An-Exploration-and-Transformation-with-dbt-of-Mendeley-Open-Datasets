@@ -1,0 +1,40 @@
+
+
+============================== 2023-03-17 16:24:45.238521 | 345a6712-229d-4cb3-b07e-ac2e1d5b76d3 ==============================
+[0m16:24:45.238521 [info ] [MainThread]: Running with dbt=1.4.5
+[0m16:24:45.239475 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/kolawole/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'mendeley_warehouse', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m16:24:45.239598 [debug] [MainThread]: Tracking: tracking
+[0m16:24:45.257233 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4fa752430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4f805c760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4f805c8e0>]}
+[0m16:24:45.260531 [debug] [MainThread]: Starter project path: /Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/include/starter_project
+[0m16:24:50.492143 [info ] [MainThread]: 
+Your new dbt project "mendeley_warehouse" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:24:50.492537 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4fa752430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4f805c760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa508b96d00>]}
+[0m16:24:50.492777 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-03-17 17:04:11.877434 | bab485c3-c38d-4e9e-9597-4d4b5bf82288 ==============================
+[0m17:04:11.877434 [info ] [MainThread]: Running with dbt=1.4.4
+[0m17:04:11.878388 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/kolawole/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m17:04:11.878497 [debug] [MainThread]: Tracking: tracking
+[0m17:04:11.891202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107309070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1073126a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107312640>]}
+[0m17:04:11.906357 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.bigquery'
+[0m17:04:12.480189 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.snowflake'
+[0m17:04:12.488250 [debug] [MainThread]: Executing "git --help"
+[0m17:04:12.503282 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:04:12.503889 [debug] [MainThread]: STDERR: "b''"
+[0m17:04:12.504278 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f4c280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1073cd460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1073cdbb0>]}
+[0m17:04:12.504568 [debug] [MainThread]: Flushing usage events

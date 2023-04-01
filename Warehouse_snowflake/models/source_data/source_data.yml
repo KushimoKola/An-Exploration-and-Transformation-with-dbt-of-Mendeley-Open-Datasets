@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: analytics_dbt
+    description: 'This database contains all data sourced from https://prod-dcd-datasets-cache-zipfiles.s3.eu-west-1.amazonaws.com/ct8f9skv97-1.zip'
+    database: analytics_dbt
+    schema: data_lake
+    tables:
+      - name: nba_games
+        description: 'This contains a txt file of NBA games between 1985-2013'
+      - name: dblp_data
+        description: 'This table contains a txt file DBLP dataset'
+      - name: twitter_data
+        description: 'This table contains a txt file of Twitter dataset - scrapped tweets'

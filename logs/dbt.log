@@ -165,3 +165,168 @@ cannot import name 'FailedToConnectException' from 'dbt.exceptions' (/Users/kola
     from dbt.exceptions import (
 ImportError: cannot import name 'FailedToConnectException' from 'dbt.exceptions' (/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/exceptions.py)
 
+
+
+============================== 2023-03-31 04:12:14.585525 | 7b45fffd-01a0-470b-9b95-09f109257aa4 ==============================
+[0m04:12:14.585525 [info ] [MainThread]: Running with dbt=1.4.5
+[0m04:12:14.586855 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/kolawole/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m04:12:14.587048 [debug] [MainThread]: Tracking: tracking
+[0m04:12:14.603568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d2910e220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d4805c9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d4805cc70>]}
+[0m04:12:17.071880 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d2910efd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d6b20ac10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d696bc490>]}
+[0m04:12:17.072277 [debug] [MainThread]: Flushing usage events
+[0m04:12:17.339642 [error] [MainThread]: Encountered an error:
+cannot import name 'FailedToConnectException' from 'dbt.exceptions' (/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/exceptions.py)
+[0m04:12:17.344348 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/main.py", line 136, in main
+    results, succeeded = handle_and_check(args)
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/main.py", line 206, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/main.py", line 253, in run_from_args
+    results = task.run()
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/task/debug.py", line 109, in run
+    self.test_configuration()
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/task/debug.py", line 281, in test_configuration
+    profile_status = self._load_profile()
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/task/debug.py", line 252, in _load_profile
+    profile: Profile = Profile.render_from_args(self.args, renderer, profile_name)
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/config/profile.py", line 428, in render_from_args
+    return cls.from_raw_profiles(
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/config/profile.py", line 394, in from_raw_profiles
+    return cls.from_raw_profile_info(
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/config/profile.py", line 348, in from_raw_profile_info
+    credentials: Credentials = cls._credentials_from_profile(
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/config/profile.py", line 181, in _credentials_from_profile
+    cls = load_plugin(typename)
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/factory.py", line 202, in load_plugin
+    return FACTORY.load_plugin(name)
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/factory.py", line 57, in load_plugin
+    mod: Any = import_module("." + name, "dbt.adapters")
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/bigquery/__init__.py", line 1, in <module>
+    from dbt.adapters.bigquery.connections import BigQueryConnectionManager  # noqa
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 26, in <module>
+    from dbt.exceptions import (
+ImportError: cannot import name 'FailedToConnectException' from 'dbt.exceptions' (/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/exceptions.py)
+
+
+
+============================== 2023-04-01 20:36:01.039319 | 842c5168-ad17-487e-a437-bba99edf69f0 ==============================
+[0m20:36:01.039319 [info ] [MainThread]: Running with dbt=1.4.4
+[0m20:36:01.040677 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/kolawole/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m20:36:01.040855 [debug] [MainThread]: Tracking: tracking
+[0m20:36:01.050529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10602adf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1060599a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106059460>]}
+[0m20:36:01.071171 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.snowflake'
+[0m20:36:01.081700 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.bigquery'
+[0m20:36:01.092818 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.snowflake'
+[0m20:36:01.311834 [debug] [MainThread]: Executing "git --help"
+[0m20:36:01.319856 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:36:01.320463 [debug] [MainThread]: STDERR: "b''"
+[0m20:36:01.321072 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10612f7f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1060189d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106018eb0>]}
+[0m20:36:01.321426 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-01 20:41:31.358292 | 417053d5-9c31-4188-ad5a-072b58d06181 ==============================
+[0m20:41:31.358292 [info ] [MainThread]: Running with dbt=1.4.5
+[0m20:41:31.359627 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/kolawole/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m20:41:31.359823 [debug] [MainThread]: Tracking: tracking
+[0m20:41:31.379502 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb669c4b430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb66805c9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb66805cc70>]}
+[0m20:41:35.882356 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb66b0f9640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb6402ecd60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb679866dc0>]}
+[0m20:41:35.882697 [debug] [MainThread]: Flushing usage events
+[0m20:41:36.863276 [error] [MainThread]: Encountered an error:
+cannot import name 'FailedToConnectException' from 'dbt.exceptions' (/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/exceptions.py)
+[0m20:41:36.866672 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/main.py", line 136, in main
+    results, succeeded = handle_and_check(args)
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/main.py", line 206, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/main.py", line 253, in run_from_args
+    results = task.run()
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/task/debug.py", line 109, in run
+    self.test_configuration()
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/task/debug.py", line 281, in test_configuration
+    profile_status = self._load_profile()
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/task/debug.py", line 252, in _load_profile
+    profile: Profile = Profile.render_from_args(self.args, renderer, profile_name)
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/config/profile.py", line 428, in render_from_args
+    return cls.from_raw_profiles(
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/config/profile.py", line 394, in from_raw_profiles
+    return cls.from_raw_profile_info(
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/config/profile.py", line 348, in from_raw_profile_info
+    credentials: Credentials = cls._credentials_from_profile(
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/config/profile.py", line 181, in _credentials_from_profile
+    cls = load_plugin(typename)
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/factory.py", line 202, in load_plugin
+    return FACTORY.load_plugin(name)
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/factory.py", line 57, in load_plugin
+    mod: Any = import_module("." + name, "dbt.adapters")
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/bigquery/__init__.py", line 1, in <module>
+    from dbt.adapters.bigquery.connections import BigQueryConnectionManager  # noqa
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 26, in <module>
+    from dbt.exceptions import (
+ImportError: cannot import name 'FailedToConnectException' from 'dbt.exceptions' (/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/exceptions.py)
+
+
+
+============================== 2023-04-01 22:04:35.422253 | a00e0684-4179-450b-8106-6d71267c0ba5 ==============================
+[0m22:04:35.422253 [info ] [MainThread]: Running with dbt=1.4.5
+[0m22:04:35.423319 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/kolawole/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m22:04:35.423468 [debug] [MainThread]: Tracking: tracking
+[0m22:04:35.436838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0e8a8e280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0f807ca00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0f807cca0>]}
+[0m22:04:37.347118 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0e8a8efd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0dbc3fca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0e88ada30>]}
+[0m22:04:37.347434 [debug] [MainThread]: Flushing usage events
+[0m22:04:38.587665 [error] [MainThread]: Encountered an error:
+cannot import name 'FailedToConnectException' from 'dbt.exceptions' (/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/exceptions.py)
+[0m22:04:38.594409 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/main.py", line 136, in main
+    results, succeeded = handle_and_check(args)
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/main.py", line 206, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/main.py", line 253, in run_from_args
+    results = task.run()
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/task/debug.py", line 109, in run
+    self.test_configuration()
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/task/debug.py", line 281, in test_configuration
+    profile_status = self._load_profile()
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/task/debug.py", line 252, in _load_profile
+    profile: Profile = Profile.render_from_args(self.args, renderer, profile_name)
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/config/profile.py", line 428, in render_from_args
+    return cls.from_raw_profiles(
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/config/profile.py", line 394, in from_raw_profiles
+    return cls.from_raw_profile_info(
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/config/profile.py", line 348, in from_raw_profile_info
+    credentials: Credentials = cls._credentials_from_profile(
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/config/profile.py", line 181, in _credentials_from_profile
+    cls = load_plugin(typename)
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/factory.py", line 202, in load_plugin
+    return FACTORY.load_plugin(name)
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/factory.py", line 57, in load_plugin
+    mod: Any = import_module("." + name, "dbt.adapters")
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/bigquery/__init__.py", line 1, in <module>
+    from dbt.adapters.bigquery.connections import BigQueryConnectionManager  # noqa
+  File "/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 26, in <module>
+    from dbt.exceptions import (
+ImportError: cannot import name 'FailedToConnectException' from 'dbt.exceptions' (/Users/kolawole/opt/anaconda3/lib/python3.8/site-packages/dbt/exceptions.py)
+

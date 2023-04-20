@@ -30,6 +30,6 @@ SELECT
     raw_data:"cite" AS citations,
     raw_data:"publtype" AS publication_type
 FROM
-    analytics_dbt.source_data.source_dblp_data
+    {{ ref('source_dblp_data') }}
 )
-SELECT * from  flattened_dblp_data;
+SELECT * from  flattened_dblp_data

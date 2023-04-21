@@ -43,5 +43,5 @@ FROM {{ ref('source_nba_games') }},
 )
 SELECT 
 * EXCLUDE (datex),
-to_timestamp(flattened_nba_data.datex::string, 'YYYY-MM-DD"T"HH24:MI:SS.FF3TZHTZM') AS DATE
+to_timestamp(flattened_nba_data.datex::string, 'YYYY-MM-DD"T"HH24:MI:SS.FF3TZHTZM') AS created_at
 from flattened_nba_data

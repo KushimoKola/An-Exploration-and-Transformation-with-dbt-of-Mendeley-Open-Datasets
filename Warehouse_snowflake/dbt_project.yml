@@ -39,3 +39,6 @@ models:
     staging:
       +schema: staging
       +materialized: view
+    data_mart:
+      +schema: data_mart
+      +materialized: table
